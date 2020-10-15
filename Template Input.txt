@@ -1,0 +1,148 @@
+Template node
+
+The template node is a widget which can contain any valid html and Angular/Angular-material directives.
+
+
+Template: type Widget in group
+Group: Watson Visual Recognition
+Size: 9 X 8
+
+Template:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Visual Recognition</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <style>
+  .bg-light {
+     
+    background-color: #A42156!important;
+	}
+	dashboard-template h4 {
+    color: #111111 !important;
+    background-color: #A42156 !important;
+    }
+	
+	.custom-file {
+		margin-bottom: 14px;
+		}
+		
+	.table .thead-dark th {
+		color: #fff;
+		background-color: #A42156;
+		border-color: #A42156;
+	}
+	h5{
+	    text-align: center;
+		    color: #EB9E30;
+		}
+		.text-center {
+		  text-align: center;
+		}
+	.imgdiv
+	{
+		align:center;
+	}
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-expand-sm bg-light">
+		<div class="justify-content-center">
+			<h4 class="text-center">Food Nutrition Dashboard </h4>
+		</div>
+	</nav>
+	<br><br>
+    <div class="container">
+		<div class="row">
+			<div class="col-sm-2">
+			</div>
+			<div class="col-sm-8">
+				
+					<div class="custom-file">
+					
+						<input type="file" name="pic" accept="image/*" onchange="readURL(this);" class="custom-file-input" id="customFile">
+						
+						<label class="custom-file-label" for="customFile">Choose file</label>
+					</div>
+					<br>
+					<div class="imgdiv">
+						<img src="#" id="blah" class="rounded" alt="Selected Image">
+					</div>
+					<!--<md-button ng-click="send({payload:action()})">
+						Predict
+					</md-button>-->
+					<button type="submit" ng-click="send({payload:action()})" class="btn btn-success">Submit</button>
+				
+				
+			</div>
+		
+</body>
+</html>
+<script>
+var x="";
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#blah')
+                    .attr('src', e.target.result)
+                    .width(150)
+                    .height(200);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+            x= input.files[0]
+
+            
+            
+
+        }
+    }
+    function getdata(data)
+	{
+		 var html = '';
+            if(data != 0)
+			{
+				$.each(data, function(i){
+				var row = data[i];
+				console.log(row);
+				html += '<tr>';
+				html += '<td>';
+				html +=  row.class;
+				html += '</td>';
+				html += '<td>';
+				html +=  row.score;
+				html += '</td>';
+				html += '</tr>';
+			});
+			}
+			else
+				html+="<div>No Data</div>";
+			$('#scoretable').html(html);
+	}
+    (function(scope) {
+        scope.$watch('msg.payload', function(data) {
+            console.log('Position 2');
+            console.dir(data);
+            getdata(data);
+
+        });
+    })(scope);
+    
+    
+// or overwrite value in your callback function ...
+this.scope.action = function() { return x; }
+
+</script>
+
+
+
+Pass through messages from input
+Add output messages to stored state

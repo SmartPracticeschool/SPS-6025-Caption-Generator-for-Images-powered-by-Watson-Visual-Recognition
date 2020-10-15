@@ -1,0 +1,7 @@
+Print message debug node result images
+
+print.msg.result.images
+
+output: msg.result.images
+
+name: Print msg.result.images

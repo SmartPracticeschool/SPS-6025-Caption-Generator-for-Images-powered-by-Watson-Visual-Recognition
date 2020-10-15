@@ -1,0 +1,13 @@
+Template output
+
+Template type: Widget in group
+
+Group: [IBM]Results
+Size 9 X 12
+
+Template: 
+<div ng-bind-html="msg.template"></div>
+
+
+Pass through messages from input
+Add output messages to stored state.

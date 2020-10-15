@@ -1,0 +1,5 @@
+Debug node
+
+Payload 
+
+Output: msg.payload

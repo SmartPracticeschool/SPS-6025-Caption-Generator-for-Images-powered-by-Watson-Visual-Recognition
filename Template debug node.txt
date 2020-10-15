@@ -1,0 +1,7 @@
+Debug node
+
+
+
+Output: msg.template
+
+Name: What did Watson find?
