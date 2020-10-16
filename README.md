@@ -1,35 +1,33 @@
 # SPS-6025-Caption-Generator-for-Images-powered-by-Watson-Visual-Recognition
 Caption Generator for Images powered by  Watson Visual Recognition
 
-Services used
+We have used following Services
 Watson servces
 configure Visual Recognition service
 Attached storage service with it.
 Launch Watson Studio
-To get credentials:
+We have used credentials to connect our service:
 API key : *************************
 URL: https://api.us-south.visual-recognition.watson.cloud.ibm.com/instances/250d401e-1b48-4c1b-bc8c-a6e45ca27e65
 
-Choose Prebuild model for our example
-General
-GO to test
+For the caption generation we have used the Prebuild Gneral model in our example
+First step is to GO to test
 
-Overview:
+Overview of the model:
 Model ID	default
 Status		Ready
 Explanation	Generate class keywords that describe the image. Use your own images, or extract relevant image URLs from publicly accessible webpages for analysis.
 
-Test:
+We have used the Test:
 Where we can browse any image to get captions
 now we integrate it with Node-red
 
-for that we have to start 
+To display in the browser we we have used NOde-red services. 
 
-Cloud foundary services to start node-red services
+Cloud foundary services are used to start node-red services
 
 Use the IBM Cloud® command-line interface (CLI) to download, modify, and redeploy your Cloud Foundry applications and service instances.
-
-visit app url 
+After configuration we have to isit app url 
 
 Go to your Node-RED flow editor
 
