@@ -5,7 +5,7 @@ The text to speech service understands text and natural language to generate syn
 
 
 
-API Key:
+API Key: **********************************
 
 Service Endpoint: https://api.us-south.text-to-speech.watson.cloud.ibm.com/instances/614664fa-a093-465e-9da2-c45afc189af6
 
