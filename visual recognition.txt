@@ -5,7 +5,7 @@ we have used the watson visual recognition service v3 to identify the scenes and
 We can create and train a custom classifier to identify subjects that suit our needs.
 
 
- API Key: PPOy4CA4VBKj7u_NkATTksGPNLaEB9o7ivMdEVwrVVJR
+ API Key: *********************************
 
  Service Endpoint: 
 https://api.us-south.visual-recognition.watson.cloud.ibm.com/instances/250d401e-1b48-4c1b-bc8c-a6e45ca27e65
